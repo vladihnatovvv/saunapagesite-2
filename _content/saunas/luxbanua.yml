@@ -1,0 +1,11 @@
+title: "Luxury Bath"
+slug: "luxbanua"
+mainTitle: "Lux баня"
+descriptionLabel: "Pro banyu"
+description: "Premium luxury sauna experience with modern amenities, private relaxation rooms, and authentic Russian steam traditions. Perfect for discerning guests seeking ultimate comfort and wellness."
+image: "images/saunavip2.jpg"
+gallery:
+  - image: "images/saunavip2.jpg"
+  - image: "images/saunavip3.jpg"
+videoUrl: "images/video.mp4"
+price: 35.00

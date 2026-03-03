@@ -1,0 +1,75 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "_content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Page Title", name: "title", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string" }
+      - { label: "Main Title (H1)", name: "mainTitle", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+
+  - name: "saunas"
+    label: "Saunas"
+    folder: "_content/saunas"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Sauna Name", name: "title", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "e.g., fishbanua" }
+      - { label: "Main Title", name: "mainTitle", widget: "string", hint: "H1 title on page" }
+      - { label: "Description Label", name: "descriptionLabel", widget: "string", hint: "Pro Banyu, etc." }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Gallery Images", name: "gallery", widget: "list", field: { label: "Image", name: "image", widget: "image" } }
+      - { label: "Video URL", name: "videoUrl", widget: "string", required: false }
+      - { label: "Price (€)", name: "price", widget: "number", value_type: "float" }
+
+  - name: "services"
+    label: "Services"
+    folder: "_content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Service Name", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Price (€)", name: "price", widget: "number", value_type: "float" }
+      - { label: "Category", name: "category", widget: "select", options: ["banshchik", "veniki", "massage", "other"] }
+
+  - name: "site_content"
+    label: "Site Content"
+    folder: "_content"
+    create: false
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "_content/homepage.yml"
+        fields:
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - { label: "About Section Title", name: "aboutTitle", widget: "string" }
+          - { label: "Footer Address", name: "footerAddress", widget: "text" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+
+      - label: "Contact Info"
+        name: "contacts"
+        file: "_content/contacts.yml"
+        fields:
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address", name: "address", widget: "text" }
+          - { label: "Monday-Friday Hours", name: "weekdayHours", widget: "string" }
+          - { label: "Saturday-Sunday Hours", name: "weekendHours", widget: "string" }
+          - { label: "Telegram", name: "telegram", widget: "string" }
+          - { label: "Instagram", name: "instagram", widget: "string" }
+          - { label: "WhatsApp", name: "whatsapp", widget: "string" }

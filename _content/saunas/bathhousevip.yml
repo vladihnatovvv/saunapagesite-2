@@ -1,0 +1,11 @@
+title: "VIP Bath"
+slug: "bathhousevip"
+mainTitle: "Vip-Баня"
+descriptionLabel: "Premium Service"
+description: "The ultimate VIP sauna experience in Dortmund. Exclusive facilities with private pools, jacuzzi, and premium amenities. Expert banshchiks and bespoke wellness services for the most discerning clients."
+image: "images/saunavip1.jpg"
+gallery:
+  - image: "images/saunavip1.jpg"
+  - image: "images/saunavip2.jpg"
+videoUrl: "images/video.mp4"
+price: 45.00
