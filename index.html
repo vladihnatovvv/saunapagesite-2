@@ -662,7 +662,17 @@
     </div>
   </footer>
 
-
+  <script>
+    if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+    if (!user) {
+    window.netlifyIdentity.on("login", () => {
+    document.location.href = "/admin/";
+    });
+    }
+    });
+    }
+    </script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/leaflet.js"></script>
   <script src="js/script.js"></script>
