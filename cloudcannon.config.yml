@@ -1,15 +1,49 @@
-# CloudCannon Configuration
-# This file configures how CloudCannon handles your site
-
 paths:
   source: /
   layouts: /
   includes: /
   data: /
-
-# Define editable regions
+collections_config:
+  source:
+    path: ''
+    icon: package_2
+    disable_url: false
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  admin:
+    path: admin
+    icon: ad
+    disable_url: false
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  content:
+    path: _content
+    icon: wysiwyg
+    disable_url: false
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  pages:
+    path: _content/pages
+    glob:
+      - '!_index.md'
+    icon: wysiwyg
+    disable_url: false
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  saunas:
+    path: _content/saunas
+    glob:
+      - '!_index.md'
+    icon: sauna
+    disable_url: false
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
 _editables:
-  # Text elements
   p:
     class: editable
     options:
@@ -19,83 +53,63 @@ _editables:
       underline: true
       link: true
       strike: true
-  
-  # Headings
   h1:
     class: editable
     options:
       format: h1
       bold: true
       italic: true
-  
   h2:
     class: editable
     options:
       format: h2
       bold: true
       italic: true
-  
   h3:
     class: editable
     options:
       format: h3
       bold: true
       italic: true
-  
   h4:
     class: editable
     options:
       format: h4
       bold: true
       italic: true
-  
   h5:
     class: editable
     options:
       format: h5
       bold: true
       italic: true
-  
   h6:
     class: editable
     options:
       format: h6
       bold: true
       italic: true
-  
-  # Links
   a:
     class: editable
     options:
       link: true
-  
-  # Images
   img:
     class: editable
     options:
       format: img
-  
-  # Videos
   video:
     class: editable
     options:
       format: video
-
-# Collections
+editor:
+  default_path: /index.html
+source_editor: true
+timezone: Etc/UTC
 collections:
   pages:
     path: /
     filter: .html
     name: Pages
     icon: description
-
-# Content editor configuration
 content_editors:
   - visual
-
-# CloudCannon editor specific settings
-editor:
-  default_path: /index.html
-
-# Visual editor settings
-source_editor: true
