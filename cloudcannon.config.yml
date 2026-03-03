@@ -1,0 +1,160 @@
+paths:
+  source: /
+  uploads: /images
+  base_url: /images
+
+collections_config:
+  pages:
+    path: _content/pages
+    create:
+      path: "{slug}.yml"
+    schema:
+      fields:
+        - label: "Page Title"
+          name: "title"
+          type: "text"
+        - label: "URL Slug"
+          name: "slug"
+          type: "text"
+        - label: "Main Title (H1)"
+          name: "mainTitle"
+          type: "text"
+        - label: "Description"
+          name: "description"
+          type: "textarea"
+        - label: "Featured Image"
+          name: "image"
+          type: "image"
+
+  saunas:
+    path: _content/saunas
+    create:
+      path: "{slug}.yml"
+    schema:
+      fields:
+        - label: "Sauna Name"
+          name: "title"
+          type: "text"
+        - label: "URL Slug"
+          name: "slug"
+          type: "text"
+        - label: "Main Title"
+          name: "mainTitle"
+          type: "text"
+        - label: "Description Label"
+          name: "descriptionLabel"
+          type: "text"
+        - label: "Description"
+          name: "description"
+          type: "textarea"
+        - label: "Featured Image"
+          name: "image"
+          type: "image"
+        - label: "Gallery Images"
+          name: "gallery"
+          type: "array"
+          of:
+            type: "object"
+            fields:
+              - label: "Image"
+                name: "image"
+                type: "image"
+        - label: "Video URL"
+          name: "videoUrl"
+          type: "text"
+        - label: "Price (€)"
+          name: "price"
+          type: "number"
+
+  services:
+    path: _content/services
+    create:
+      path: "{slug}.yml"
+    schema:
+      fields:
+        - label: "Service Name"
+          name: "title"
+          type: "text"
+        - label: "Description"
+          name: "description"
+          type: "textarea"
+        - label: "Price (€)"
+          name: "price"
+          type: "number"
+        - label: "Category"
+          name: "category"
+          type: "select"
+          options:
+            - banshchik
+            - veniki
+            - massage
+            - other
+
+  site_content:
+    path: _content
+    create: false
+    schema:
+      fields:
+        - label: "Homepage"
+          name: "homepage"
+          type: "object"
+          path: "_content/homepage.yml"
+          fields:
+            - label: "Hero Title"
+              name: "heroTitle"
+              type: "text"
+            - label: "Hero Subtitle"
+              name: "heroSubtitle"
+              type: "textarea"
+            - label: "About Section Title"
+              name: "aboutTitle"
+              type: "text"
+            - label: "Footer Address"
+              name: "footerAddress"
+              type: "textarea"
+            - label: "Phone"
+              name: "phone"
+              type: "text"
+            - label: "Email"
+              name: "email"
+              type: "email"
+
+        - label: "Contact Info"
+          name: "contacts"
+          type: "object"
+          path: "_content/contacts.yml"
+          fields:
+            - label: "Phone Number"
+              name: "phone"
+              type: "text"
+            - label: "Email"
+              name: "email"
+              type: "email"
+            - label: "Address"
+              name: "address"
+              type: "textarea"
+            - label: "Monday-Friday Hours"
+              name: "weekdayHours"
+              type: "text"
+            - label: "Saturday-Sunday Hours"
+              name: "weekendHours"
+              type: "text"
+            - label: "Telegram"
+              name: "telegram"
+              type: "text"
+            - label: "Instagram"
+              name: "instagram"
+              type: "text"
+            - label: "WhatsApp"
+              name: "whatsapp"
+              type: "text"
+
+_editables:
+  content:
+    bold: true
+    italic: true
+    link: true
+    format: p h2 h3 h4 h5 h6
+  image:
+    width: 200
+    height: 200
